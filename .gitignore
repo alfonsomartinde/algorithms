@@ -6,3 +6,6 @@
 /app/tmpl
 /WEBAPP.txt
 npm-debug.log
+.sass-cache
+/app/css
+/app/img/spr

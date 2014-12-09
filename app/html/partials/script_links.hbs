@@ -1,6 +1,8 @@
 <!-- build:js ../js/commons.min.js -->
 <script src="../js/libs/jquery.js"></script>
 <script src="../js/libs/underscore.js"></script>
-<script src="../js/indr/base.js"></script>
-<script src="../js/commons.js"></script>
 <!-- endbuild -->
+
+{{#each scripts}}
+    <script src="../js/algorithms/{{this ..}}"></script>
+{{/each}}  

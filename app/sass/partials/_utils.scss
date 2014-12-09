@@ -47,33 +47,3 @@
       right:$r;
    }
 }
-
-@mixin spr2-sprite-insert ($nameImg,$w,$h,$l:auto,$t:auto,$b:0,$r:0){
-   position:relative;
-   &:after{
-      @include spr2-sprite($nameImg);
-      position:absolute;
-      content:'';
-      width:$w;
-      height:$h;   
-      left:$l;
-      top:$t;
-      bottom:$b;
-      right:$r;
-   }
-}
-
-@mixin spr2-sprite-insert-before ($nameImg,$w,$h,$l:auto,$t:auto,$b:0,$r:0){
-   position:relative;
-   &:before{
-      @include spr2-sprite($nameImg);
-      position:absolute;
-      content:'';
-      width:$w;
-      height:$h;   
-      left:$l;
-      top:$t;
-      bottom:$b;
-      right:$r;
-   }
-}
