@@ -1,0 +1,24 @@
+body {
+    font-family:$fontGeneral;
+    margin:0 auto;
+    font-size:62.5%;
+    color:#000;
+    background:#fff;
+}
+
+img {
+    display:block;
+    width:100%;
+}
+
+a {
+    color:$colorEnlaces;
+    text-decoration:none;
+}
+
+.hide  { display:none; }
+.ftl   { float:left; }
+.ftr   { float:right; }
+.clearfix  { @include clearfix(); }
+.accesible { @include accesible(); }
+

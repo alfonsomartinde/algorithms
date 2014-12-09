@@ -1,0 +1,28 @@
+/**
+ * Grid a 15 columnas
+ */
+@media only screen and ( min-width: $screen-xl-min ) and ( max-width: $screen-xl-max ) {
+
+    .container [class*="g_"] + [class*="g_"] {
+       margin-left: 1.043842%;
+    }
+
+    .fixedWidth {max-width: $screen-xl-fixedWidth !important;}
+
+    .first_xl {margin-left: 0 !important; clear: left;}
+    .hide_xl {display: none !important;}
+
+    .g_1_xl  {width:7.376478%;}
+    .g_2_xl  {width:15.796798%;}
+    .g_3_xl  {width:24.217118%;}
+    .g_4_xl  {width:32.637438%;}
+    .g_5_xl  {width:41.057758%;}
+    .g_6_xl  {width:49.478078%;}
+    .g_7_xl  {width:57.898398%;}
+    .g_8_xl  {width:66.318718%;}
+    .g_9_xl  {width:74.739038%;}
+    .g_10_xl {width:83.159358%;}
+    .g_11_xl {width:91.579678%;}
+    .g_12_xl {width:99.999998%;}
+
+}

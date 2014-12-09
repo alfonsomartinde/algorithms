@@ -1,0 +1,27 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "sub": true,
+  "undef": true,
+  "unused": false,
+  "boss": true,
+  "eqnull": true,
+  "globals": {
+    "$": false,
+    "_": false,
+    "jQuery": false,
+    "APP": true,
+    "window": false,
+    "document": false,
+    "console": false,
+    "module": false,
+    "require": false,
+    "process":false,
+    "alert":false,
+    "isEmail":false
+  }
+}

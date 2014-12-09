@@ -1,0 +1,74 @@
+// Debug?
+//------------------------------------------------------------------------------
+$degug:false;
+
+
+// Base64 images
+//------------------------------------------------------------------------------
+$rutabase64:"base64/";
+
+
+// Media Queries Breakpoints
+//------------------------------------------------------------------------------
+
+// mobile hasta 320px
+// mobile:portrait
+$screen-xs-fixedWidth:          300px;
+$screen-xs-max:                 320px;
+
+// tablet de 320 a 600px 
+// mobile:landscape, tablet:portrait
+$screen-sm-fixedWidth:          300px;
+$screen-sm-min:                 321px;
+$screen-sm-max:                 499px;
+
+// tablet de 600 a 768px
+// tablet:portrait, tablet:landscape
+$screen-md-fixedWidth:          474px;
+$screen-md-min:                 500px;
+$screen-md-max:                 767px;
+
+// tabler de 768 a 992px
+// tablet:landscape
+$screen-lg-fixedWidth:          716px;
+$screen-lg-min:                 768px; 
+$screen-lg-max:                 992px;
+
+// desktop mayores de 992px
+$screen-xl-fixedWidth:          958px;
+$screen-xl-min:                 993px;
+$screen-xl-max:                1279px;
+
+// desktop mayores de 1200px
+$screen-xxl-fixedWidth:        1200px;
+$screen-xxl-min:               1280px;
+
+
+// Colores
+//------------------------------------------------------------------------------
+
+$colorPrimario:                #00b0ca; // azul
+$colorSecundario:              #e21776; // rosa
+$colorTerciario:               #ffa100; // naranja
+$colorCuaternario:             #c3cd05; // verde
+
+$colorTexto:                   #303030; // gris oscuro casi negro
+$colorTextoInverso:            #ffffff; // blanco
+$colorEnlaces:                 $colorPrimario;
+
+
+// Fuentes
+//------------------------------------------------------------------------------
+
+$fontFamilySansserif:       Arial, Helvetica, sans-serif;
+$fontFamilySerif:           Georgia, "Times New Roman", Times, serif;
+$fontFamilyMonospace:       Menlo, Monaco, Consolas, "Courier New", monospace;
+
+$fontGeneral:               $fontFamilySansserif;
+$fontbase:                  16px;
+
+
+// SVG para IE
+//------------------------------------------------------------------------------
+
+$experimental-support-for-svg: true;

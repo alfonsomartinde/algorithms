@@ -1,0 +1,79 @@
+@mixin clearfix() {
+   *zoom: 1;
+   &:before,
+   &:after {
+      display: table;
+      content: "";
+      // Fixes Opera/contenteditable bug:
+      // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+      line-height: 0;
+   }
+   &:after {
+      clear: both;
+   }
+}
+
+@mixin accesible() {
+   position: absolute !important; 
+   clip: rect(1px, 1px, 1px, 1px); 
+}
+
+@mixin spr1-sprite-insert ($nameImg,$w,$h,$l:auto,$t:auto,$b:0,$r:0){
+   position:relative;
+   &:after{
+      @include spr1-sprite($nameImg);
+      position:absolute;
+      content:'';
+      width:$w;
+      height:$h;   
+      left:$l;
+      top:$t;
+      bottom:$b;
+      right:$r;
+   }
+}
+
+@mixin spr1-sprite-insert-before ($nameImg,$w,$h,$l:auto,$t:auto,$b:0,$r:0){
+   position:relative;
+   &:before{
+      @include spr1-sprite($nameImg);
+      position:absolute;
+      content:'';
+      width:$w;
+      height:$h;   
+      left:$l;
+      top:$t;
+      bottom:$b;
+      right:$r;
+   }
+}
+
+@mixin spr2-sprite-insert ($nameImg,$w,$h,$l:auto,$t:auto,$b:0,$r:0){
+   position:relative;
+   &:after{
+      @include spr2-sprite($nameImg);
+      position:absolute;
+      content:'';
+      width:$w;
+      height:$h;   
+      left:$l;
+      top:$t;
+      bottom:$b;
+      right:$r;
+   }
+}
+
+@mixin spr2-sprite-insert-before ($nameImg,$w,$h,$l:auto,$t:auto,$b:0,$r:0){
+   position:relative;
+   &:before{
+      @include spr2-sprite($nameImg);
+      position:absolute;
+      content:'';
+      width:$w;
+      height:$h;   
+      left:$l;
+      top:$t;
+      bottom:$b;
+      right:$r;
+   }
+}

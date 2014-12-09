@@ -1,0 +1,29 @@
+.container {
+    width: 100%;
+    position: relative;
+    @include clearfix();
+}
+[class*="g_"] {
+   float:left;
+}
+.container [class*="g_"] {
+    float: left;
+    min-height: 1px;
+    box-sizing: border-box;
+}
+.container [class*="g_"]:first-child {
+    margin-left:0;
+}
+
+.grid_info {
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 999999999;
+    font-size:1.7em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:#fff;
+    background-color: #f00;
+    padding: 1em;
+}

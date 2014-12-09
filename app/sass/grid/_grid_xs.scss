@@ -1,0 +1,27 @@
+/**
+ * Grid a 12 columnas
+ */
+@media only screen and ( max-width: $screen-xs-max ) {
+
+    .container [class*="g_"] + [class*="g_"] {
+       margin-left: 3.125%;
+    }
+
+    .fixedWidth {max-width: $screen-xs-fixedWidth !important;}
+    
+    .first_xs {margin-left: 0 !important; clear: left;}
+    .hide_xs {display: none !important;}
+
+    .g_1_xs  {width:5.46875%;}
+    .g_2_xs  {width:14.0625%;}
+    .g_3_xs  {width:22.65625%;}
+    .g_4_xs  {width:31.25%;}
+    .g_5_xs  {width:39.84375%;}
+    .g_6_xs  {width:48.4375%;}
+    .g_7_xs  {width:57.03125%;}
+    .g_8_xs  {width:65.625%;}
+    .g_9_xs  {width:74.21875%;}
+    .g_10_xs {width:82.8125%;}
+    .g_11_xs {width:91.40625%;}
+    .g_12_xs {width:100%;}
+}

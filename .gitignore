@@ -1,0 +1,8 @@
+/.idea
+/node_modules
+/bower
+/dev
+/pro
+/app/tmpl
+/WEBAPP.txt
+npm-debug.log
