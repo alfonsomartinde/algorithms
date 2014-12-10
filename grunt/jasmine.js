@@ -1,8 +1,9 @@
 module.exports = {
     pivotal: {
         src : [
-            'dev/js/indr/base.js',
-            'dev/js/commons.js'
+            'dev/js/core/base.js',
+            'dev/js/core/helpers.js',
+            'dev/js/algorithms/**/*'
         ],
         options: {
             vendor: [
