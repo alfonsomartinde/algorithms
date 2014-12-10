@@ -54,3 +54,12 @@ describe("Algorithm 001: a string as an anagram which is also a palindrome", fun
         expect( APP.hasAnAnagramWithAPalindrome("dabale arroz a la zorra el abad" ) ).toBe( true );
     });
 });
+
+describe("Algorithm 002: unique string in array", function(){
+    it("hasAnAnagramWithAPalindrome", function(){
+        expect( APP.uniqueStringInArray( ["a","2","vv","ca","d","a","b","e","e","a"] ) ).toBe( "2" );
+        expect( APP.uniqueStringInArray( ["1","2","vv","ca","d","a","b","e","e","a"] ) ).toBe( "1" );
+        expect( APP.uniqueStringInArray( ["ca","d","vv","ca","d","a","b","e","e","a"] ) ).toBe( "vv" );
+        expect( APP.uniqueStringInArray( ["a","a","a","a","b","b","b","e","e","a"] ) ).toBe( "" );
+    });
+});
