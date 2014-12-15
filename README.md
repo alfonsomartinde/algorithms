@@ -4,8 +4,6 @@ Some algorithms I've had to deal with, in some interview process.
 
 ## Some examples
 
-> "Write a function that, given a sequence, returns its equilibrium index (any) or -1 if no equilibrium index exists. Assume that the sequence may be very long."
-
 > "Given a one-directional list of movie titles in order of how long ago you watched them (there may be duplicates), find the least-recently watched singleton movie title."
 
 > "Given a binary tree, design an algorithm that does a level order traversal of the tree, where each level is printed out in the reverse order as the previous level."
