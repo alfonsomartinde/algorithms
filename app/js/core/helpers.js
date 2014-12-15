@@ -62,4 +62,28 @@
         return str.split("").reverse().join("");
     };
 
+    /**
+     * @desc: Gets the sum of all elements of a given array.
+     *        Assuming that all the array elements are numbers.
+     *
+     * input: [1,2,3,4]
+     * output: 10
+     *
+     * @param arr {Array}
+     * @return {Integer}: The result of the sum
+     */
+    module.sumArrayElements = function( arr ){
+        function add( a, b ){
+            return a + b;
+        }
+        
+        if( arr.length === 0 ){
+            return 0;
+        }
+        
+        return ( arr.length === 1 ) ?
+            arr[ 0 ] : 
+            arr.reduce( add );
+    };
+
 }.call( this, APP.namespace( "APP.Helpers" ) ) );

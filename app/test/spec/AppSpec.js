@@ -76,3 +76,13 @@ describe("Algorithm 003: reverse words in place", function(){
         expect( APP.reverseInPlace2( "I am the good boy" ) ).toBe( "I ma eht doog yob" );
     });
 });
+
+describe("Algorithm 004: first equilibrium index", function(){
+    it("firstEquilibriumIndex", function(){
+        expect( APP.firstEquilibriumIndex( [9,12,3,4,6,1,3,7] ) ).toBe( 2 );
+        expect( APP.firstEquilibriumIndex( [1,2,3,4,5] ) ).toBe( -1 );       // No eq. index
+        expect( APP.firstEquilibriumIndex( [1,2,3,-3,-2,-1] ) ).toBe( 0 );   // The first index
+        expect( APP.firstEquilibriumIndex( [1,2,3,4,3,2,1] ) ).toBe( 3 );
+        expect( APP.firstEquilibriumIndex( [1,2,3,-3,-2,-1,9] ) ).toBe( 6 ); // The last index
+    });
+});
