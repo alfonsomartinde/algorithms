@@ -20,4 +20,7 @@ Some algorithms I've had to deal with, in some interview process.
 * **002**: [First unique string in array - Solution](app/js/algorithms/002.js) 
 > "Given an array of strings, return the first one which appears only once in the array."
 
+* **003**: [Reverse words in place](app/js/algorithms/003.js) 
+> "If you have a string like 'I am the good boy'. How can you generate 'I ma eht doog yob'? Please note that the words are in place but reverse."
+
 

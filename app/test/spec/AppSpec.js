@@ -63,3 +63,16 @@ describe("Algorithm 002: unique string in array", function(){
         expect( APP.uniqueStringInArray( ["a","a","a","a","b","b","b","e","e","a"] ) ).toBe( "" );
     });
 });
+
+describe("Algorithm 003: reverse words in place", function(){
+    it("reverseInPlace", function(){
+        expect( APP.reverseInPlace( "abc" ) ).toBe( "cba" );
+        expect( APP.reverseInPlace( "abc def ghi jkl" ) ).toBe( "cba fed ihg lkj" );
+        expect( APP.reverseInPlace( "I am the good boy" ) ).toBe( "I ma eht doog yob" );
+    });
+    it("reverseInPlace2", function(){
+        expect( APP.reverseInPlace2( "abc" ) ).toBe( "cba" );
+        expect( APP.reverseInPlace2( "abc def ghi jkl" ) ).toBe( "cba fed ihg lkj" );
+        expect( APP.reverseInPlace2( "I am the good boy" ) ).toBe( "I ma eht doog yob" );
+    });
+});
