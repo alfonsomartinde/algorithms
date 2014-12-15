@@ -97,6 +97,7 @@ describe("Algorithm 004: first equilibrium index", function(){
         expect( APP.firstEquilibriumIndex( [1,2,3,-3,-2] ) ).toEqual( 0 );      // The first index
         expect( APP.firstEquilibriumIndex( [1,2,3,-3,-2,-1] ) ).not.toEqual( 0 );
         expect( APP.firstEquilibriumIndex( [1,2,3,4,3,2,1] ) ).toEqual( 3 );
+        expect( APP.firstEquilibriumIndex( [9,12,3,4,6,1,3,7] ) ).toEqual( 2 );
         expect( APP.firstEquilibriumIndex( [1,2,3,-3,-2,-1,9] ) ).toEqual( 2 );
         expect( APP.firstEquilibriumIndex( [1,2,3,4,5,-15,35] ) ).toEqual( 6 ); // The last index
     });
@@ -106,6 +107,7 @@ describe("Algorithm 004: first equilibrium index", function(){
         expect( APP.firstEquilibriumIndex2( [1,2,3,-3,-2] ) ).toEqual( 0 );      // The first index
         expect( APP.firstEquilibriumIndex2( [1,2,3,-3,-2,-1] ) ).not.toEqual( 0 );
         expect( APP.firstEquilibriumIndex2( [1,2,3,4,3,2,1] ) ).toEqual( 3 );
+        expect( APP.firstEquilibriumIndex2( [9,12,3,4,6,1,3,7] ) ).toEqual( 2 );
         expect( APP.firstEquilibriumIndex2( [1,2,3,-3,-2,-1,9] ) ).toEqual( 2 );
         expect( APP.firstEquilibriumIndex2( [1,2,3,4,5,-15,35] ) ).toEqual( 6 ); // The last index
     });

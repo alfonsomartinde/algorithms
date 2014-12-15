@@ -24,6 +24,6 @@ Some algorithms I've had to deal with, in some interview process.
 > "If you have a string like 'I am the good boy'. How can you generate 'I ma eht doog yob'? Please note that the words are in place but reverse."
 
 * **004**: [Finding the Equilibrium Index](app/js/algorithms/004.js) 
-> "Given an array of numbers arr, find the first index at which the sums before and after that index are equal. If there're no equilibrium index, then return -1. For example: given [9,12,3,4,6,1,3,7], the first equilibrium index is 2, because the sum of left side [9,2], is the same that the sum of the right part [4,6,1,3,7]: 9 + 2 === 4 + 6 + 1 + 3 + 7"
+> "Given an array of numbers arr, find the first index at which the sums before and after that index are equal. If there're no equilibrium index, then return -1. For example: given [9,12,3,4,6,1,3,7], the first equilibrium index is 2, because the sum of left side [9,12], is the same that the sum of the right part [4,6,1,3,7]: 9 + 12 === 4 + 6 + 1 + 3 + 7"
 
 
