@@ -6,6 +6,12 @@
 
     "use strict";
 
+
+    /***************************************************************************
+     *
+     * STRINGS
+     *
+     **************************************************************************/
     /**
      * @desc: Remove all white spaces from a given string
      *
@@ -62,6 +68,13 @@
         return str.split("").reverse().join("");
     };
 
+
+
+    /***************************************************************************
+     *
+     * ARRAYS
+     *
+     **************************************************************************/
     /**
      * @desc: Gets the sum of all elements of a given array.
      *        Assuming that all the array elements are numbers.
@@ -73,6 +86,11 @@
      * @return {Integer}: The result of the sum
      */
     module.sumArrayElements = function( arr ){
+
+        /**
+         * @desc: Sums both indexes
+         * return {Integer}
+         */
         function add( a, b ){
             return a + b;
         }
@@ -84,6 +102,40 @@
         return ( arr.length === 1 ) ?
             arr[ 0 ] : 
             arr.reduce( add );
+    };
+
+    /**
+     * @desc: Sorts an array where all its elements are integers.
+     *
+     * input: [5,2,1,9]
+     * output: [1,2,5,9]
+     *
+     * @param arr {Array}
+     * @return {Array}: The sorted array
+     */
+    module.sortArrayNumbers = function( arr ){
+
+        /**
+         * @desc: Compare both indexes to sort the array
+         *
+         *     * If compare(a, b) < 0,   sort 'a' to a lower index than 'b'.
+         *     * If compare(a, b) === 0, leave 'a' and 'b' unchanged.
+         *     * If compare(a, b) > 0,   sort 'b' to a lower index than 'a'.
+         *
+         * return {Integer}
+         */
+        function compare( a, b ){
+            return a - b;
+        }
+        
+        if( arr.length === 0 ){
+            return [];
+        }
+    
+        return ( arr.length === 1 ) ?
+             arr :
+             arr.sort( compare );
+
     };
 
 }.call( this, APP.namespace( "APP.Helpers" ) ) );

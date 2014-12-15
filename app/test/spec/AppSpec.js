@@ -18,11 +18,11 @@ describe("Environment", function() {
 describe("Helpers", function(){
 
     it("removeWhiteSpaces", function(){
-        expect( APP.Helpers.removeWhiteSpaces("a b c") ).toBe( "abc" );
-        expect( APP.Helpers.removeWhiteSpaces("abc") ).toBe( "abc" );
-        expect( APP.Helpers.removeWhiteSpaces(" this is an   example") ).toBe( "thisisanexample" );
-        expect( APP.Helpers.removeWhiteSpaces("this   is an example  ") ).toBe( "thisisanexample" );
-        expect( APP.Helpers.removeWhiteSpaces("  this is an example ") ).toBe( "thisisanexample" );
+        expect( APP.Helpers.removeWhiteSpaces("a b c") ).toEqual( "abc" );
+        expect( APP.Helpers.removeWhiteSpaces("abc") ).toEqual( "abc" );
+        expect( APP.Helpers.removeWhiteSpaces(" this is an   example") ).toEqual( "thisisanexample" );
+        expect( APP.Helpers.removeWhiteSpaces("this   is an example  ") ).toEqual( "thisisanexample" );
+        expect( APP.Helpers.removeWhiteSpaces("  this is an example ") ).toEqual( "thisisanexample" );
     });
 
     it("isPalindrome", function(){
@@ -42,6 +42,19 @@ describe("Helpers", function(){
         expect( APP.Helpers.areAnagrams(" qwawq", "qw aeq ") ).toBe( false );
         expect( APP.Helpers.areAnagrams("qmakzo ", "  qmaaz ok ") ).toBe( false );
 
+    });
+
+    it("sumArrayElements", function(){
+        expect( APP.Helpers.sumArrayElements( [1,2,3,4] ) ).toEqual( 10 );
+        expect( APP.Helpers.sumArrayElements( [] ) ).toEqual( 0 );
+        expect( APP.Helpers.sumArrayElements( [-1,3,10,-3] ) ).toEqual( 9 );
+    });
+
+    it("sortArrayNumbers", function(){
+        expect( APP.Helpers.sortArrayNumbers( [5,2,9,4] ) ).toEqual( [2,4,5,9] );
+        expect( APP.Helpers.sortArrayNumbers( [10,20,45,-87,34,487,-25,0,9,1] ) ).toEqual( [-87,-25,0,1,9,10,20,34,45,487] );
+        expect( APP.Helpers.sortArrayNumbers( [] ) ).toEqual( [] );
+        expect( APP.Helpers.sortArrayNumbers( [-1]  )).toEqual( [-1] );
     });
 
 });
@@ -66,23 +79,23 @@ describe("Algorithm 002: unique string in array", function(){
 
 describe("Algorithm 003: reverse words in place", function(){
     it("reverseInPlace", function(){
-        expect( APP.reverseInPlace( "abc" ) ).toBe( "cba" );
-        expect( APP.reverseInPlace( "abc def ghi jkl" ) ).toBe( "cba fed ihg lkj" );
-        expect( APP.reverseInPlace( "I am the good boy" ) ).toBe( "I ma eht doog yob" );
+        expect( APP.reverseInPlace( "abc" ) ).toEqual( "cba" );
+        expect( APP.reverseInPlace( "abc def ghi jkl" ) ).toEqual( "cba fed ihg lkj" );
+        expect( APP.reverseInPlace( "I am the good boy" ) ).toEqual( "I ma eht doog yob" );
     });
     it("reverseInPlace2", function(){
-        expect( APP.reverseInPlace2( "abc" ) ).toBe( "cba" );
-        expect( APP.reverseInPlace2( "abc def ghi jkl" ) ).toBe( "cba fed ihg lkj" );
-        expect( APP.reverseInPlace2( "I am the good boy" ) ).toBe( "I ma eht doog yob" );
+        expect( APP.reverseInPlace2( "abc" ) ).toEqual( "cba" );
+        expect( APP.reverseInPlace2( "abc def ghi jkl" ) ).toEqual( "cba fed ihg lkj" );
+        expect( APP.reverseInPlace2( "I am the good boy" ) ).toEqual( "I ma eht doog yob" );
     });
 });
 
 describe("Algorithm 004: first equilibrium index", function(){
     it("firstEquilibriumIndex", function(){
-        expect( APP.firstEquilibriumIndex( [9,12,3,4,6,1,3,7] ) ).toBe( 2 );
-        expect( APP.firstEquilibriumIndex( [1,2,3,4,5] ) ).toBe( -1 );       // No eq. index
-        expect( APP.firstEquilibriumIndex( [1,2,3,-3,-2,-1] ) ).toBe( 0 );   // The first index
-        expect( APP.firstEquilibriumIndex( [1,2,3,4,3,2,1] ) ).toBe( 3 );
-        expect( APP.firstEquilibriumIndex( [1,2,3,-3,-2,-1,9] ) ).toBe( 6 ); // The last index
+        expect( APP.firstEquilibriumIndex( [9,12,3,4,6,1,3,7] ) ).toEqual( 2 );
+        expect( APP.firstEquilibriumIndex( [1,2,3,4,5] ) ).toEqual( -1 );       // No eq. index
+        expect( APP.firstEquilibriumIndex( [1,2,3,-3,-2,-1] ) ).toEqual( 0 );   // The first index
+        expect( APP.firstEquilibriumIndex( [1,2,3,4,3,2,1] ) ).toEqual( 3 );
+        expect( APP.firstEquilibriumIndex( [1,2,3,-3,-2,-1,9] ) ).toEqual( 6 ); // The last index
     });
 });
