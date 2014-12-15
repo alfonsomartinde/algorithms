@@ -21,7 +21,7 @@
     /**
      * @desc: Solution of algorithm 004
      */
-    module.firstEquilibriumIndex = function( arr ){
+    module.firstEquilibriumIndex = function( arr ) {
         var i,
             len = arr.length,
             lastInd = arr.length - 1,
@@ -60,20 +60,6 @@
             return arr.slice( ind + 1 ); // until the end of array
         }
 
-
-        // If the sum of all elements in the array, is 0, then the equilibrium 
-        // index is equal to 0
-        if( APP.Helpers.sumArrayElements( arr ) === 0 ){
-            return 0;
-        }
-
-        // If the sum of all elements but last, is 0, then the equilibrium 
-        // index is equal to arr.length
-        if( APP.Helpers.sumArrayElements( getLeftSide ( arr, lastInd ) ) === 0 ){
-            return lastInd;
-        }
-
-
         // Loop search
         for ( i = 0; i < len; i++ ) {
             leftSum = APP.Helpers.sumArrayElements( getLeftSide( arr, i ) );
@@ -83,6 +69,34 @@
             if( leftSum === rightSum ){
                 return i;
             }
+        }
+
+        // Not founded
+        return -1;
+    };
+
+
+    module.firstEquilibriumIndex2 = function( arr ) { 
+        var i,
+            len = arr.length,
+            rightSum, 
+            leftSum = 0; 
+
+        //execute once for each element, execute the callback, passing the 
+        // previous callback's value and the current element
+        rightSum = APP.Helpers.sumArrayElements( arr );
+
+        //execute once for each element
+        for ( i = 0; i < len; i++ ) { 
+            
+            rightSum -= arr[ i ];
+
+            // The sum of both sides are equal
+            if ( leftSum === rightSum ) { 
+                return i;
+            }
+
+            leftSum += arr [ i ];
         }
 
         // Not founded
