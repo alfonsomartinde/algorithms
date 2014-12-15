@@ -57,6 +57,25 @@ describe("Helpers", function(){
         expect( APP.Helpers.sortArrayNumbers( [-1]  )).toEqual( [-1] );
     });
 
+    it("isPrime", function(){
+        expect( APP.Helpers.isPrime( 0 ) ).toBe( true );
+        expect( APP.Helpers.isPrime( 1 ) ).toBe( true );
+        expect( APP.Helpers.isPrime( 2 ) ).toBe( true );
+        expect( APP.Helpers.isPrime( 3 ) ).toBe( true );
+        expect( APP.Helpers.isPrime( 4 ) ).toBe( false );
+        expect( APP.Helpers.isPrime( 5 ) ).toBe( true );
+        expect( APP.Helpers.isPrime( 6 ) ).toBe( false );
+        expect( APP.Helpers.isPrime( 7 ) ).toBe( true );
+        expect( APP.Helpers.isPrime( 8 ) ).toBe( false );
+        expect( APP.Helpers.isPrime( 9 ) ).toBe( false );
+        expect( APP.Helpers.isPrime( 10 ) ).toBe( false );
+        expect( APP.Helpers.isPrime( 11 ) ).toBe( true );
+        expect( APP.Helpers.isPrime( 12 ) ).toBe( false );
+        expect( APP.Helpers.isPrime( 13 ) ).toBe( true );
+        expect( APP.Helpers.isPrime( 137 ) ).toBe( true );
+        expect( APP.Helpers.isPrime( 237 ) ).toBe( false );
+    });
+
 });
 
 describe("Algorithm 001: a string as an anagram which is also a palindrome", function(){

@@ -138,4 +138,41 @@
 
     };
 
+
+    /***************************************************************************
+     *
+     * NUMBERS
+     *
+     **************************************************************************/
+    /**
+     * @desc: Check if the given number is a prime.
+     *
+     * input: 7
+     * output: true
+     *
+     * @param number {Integer}
+     * @return {Boolean}: true if number is prime.
+     */
+    module.isPrime = function( number ){
+
+        var divisor = 3;
+
+        if( number <= 3){
+            return true;
+        }
+
+        if( number % 2 === 0 ){
+            return false;
+        }
+
+        while ( divisor < number ) {
+            if( number % divisor === 0 ) {
+                return false;
+            }
+            divisor = divisor + 2;
+        }
+
+        return true;
+    };
+
 }.call( this, APP.namespace( "APP.Helpers" ) ) );
