@@ -50,6 +50,13 @@ describe("Helpers", function(){
         expect( APP.Helpers.sumArrayElements( [-1,3,10,-3] ) ).toEqual( 9 );
     });
 
+    it("findUniques", function(){
+        expect( APP.Helpers.findUniques( [5,2,9,4] ) ).toEqual( [5,2,9,4] );
+        expect( APP.Helpers.findUniques( [5,2,1,9,5,2,3,"5","a","b","b"] ) ).toEqual( [1,9,3,"5","a"] );
+        expect( APP.Helpers.findUniques( [] ) ).toEqual( [] );
+        expect( APP.Helpers.findUniques( [false] )).toEqual( [false] );
+    });
+
     it("sortArrayNumbers", function(){
         expect( APP.Helpers.sortArrayNumbers( [5,2,9,4] ) ).toEqual( [2,4,5,9] );
         expect( APP.Helpers.sortArrayNumbers( [10,20,45,-87,34,487,-25,0,9,1] ) ).toEqual( [-87,-25,0,1,9,10,20,34,45,487] );

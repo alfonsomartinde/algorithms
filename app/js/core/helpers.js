@@ -138,6 +138,46 @@
 
     };
 
+    /**
+     * @desc: Find unique values from an array. Strict comparison.
+     *
+     * input: [5,2,1,9,5,2,3,"5","a","b","b"]
+     * output: [1,9,3,"5","a"]
+     *
+     * @param arr {Array}
+     * @return {Array}: The array with only unique values
+     */
+    module.findUniques = function( arr ){
+
+        var i,
+            lastIndex = -1,
+            firstIndex = -1,
+            len = arr.length,
+            uniqueArr = [];
+        
+        if( arr.length === 0 ){
+            return [];
+        }
+
+        if( arr.length === 1 ){
+            return arr;
+        }
+
+        for( i = 0; i < len; i++ ){
+            // indexOf:     search from front to back using strict equality
+            // lastIndexOf: search from back to front using strict equality
+            if( 
+                arr.lastIndexOf( arr[ i ] ) !== 
+                arr.indexOf( arr[ i ] ) ) {
+                continue;
+            } else {
+                uniqueArr.push( arr[ i ] );
+            }
+        }
+
+        return uniqueArr;
+
+    };
 
     /***************************************************************************
      *
